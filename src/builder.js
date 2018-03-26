@@ -1,4 +1,5 @@
-import angular from 'angular';
+import _ from 'lodash';
+import { parse } from 'objectpath';
 
 sfPostProcessor.$inject = ['postProcess', 'schemaForm'];
 
@@ -34,7 +35,7 @@ export function sfPostProcessor(postProcess, schemaForm) {
           if (!!formObj.schema.failNull) {
             validators['failNull'] = failNull;
           }
-          formObj.$validators = angular.merge({}, formObj.$validators, validators);
+          formObj.$validators = _.merge({}, formObj.$validators, validators);
 
           let parsers = [];
           if (formObj.schema.type.indexOf('string') != -1 && formObj.schema.nullable) {
@@ -60,17 +61,15 @@ export function sfErrorMessageConfig(sfErrorMessageProvider) {
   sfErrorMessageProvider.setDefaultMessage('failNull', 'Required');
 };
 
-sfBuilderService.$inject = ['$rootScope', 'sfPath', 'UtilityService'];
+sfBuilderService.$inject = ['UtilityService'];
 
 /**
  * sfBuilderService - Service for converting systems, commands, and parameters into valid
  * schema-form objects for use by angular-schema-form.
- * @param  {$rootScope} $rootScope Angular's $rootScope object.
- * @param  {string} sfPath         Schema-form path.
  * @param  {Object} UtilityService UtilityService for version/config API.
  * @return {Object}                A Service for building valid schema-form objects.
  */
-export function sfBuilderService($rootScope, sfPath, UtilityService) {
+export function sfBuilderService(UtilityService) {
   let SFBuilderService = {};
 
   /**
@@ -94,7 +93,7 @@ export function sfBuilderService($rootScope, sfPath, UtilityService) {
     // Merge the two into the final representation
     // For the schema start with common and add the model to its parameters
     // If the command has a custom schema then use that instead of the generated one
-    if (command.schema !== undefined && !angular.equals({}, command.schema)) {
+    if (command.schema !== undefined && !_.isEqual({}, command.schema)) {
       modelSchema = {type: 'object', properties: command.schema};
     } else {
       modelSchema = {type: 'object', properties: modelSF['schema']};
@@ -103,20 +102,20 @@ export function sfBuilderService($rootScope, sfPath, UtilityService) {
     // Form is a little more tricky
     // If the command has a custom form then use that instead of the generated one
     if (command.form !== undefined &&
-        !angular.equals({}, command.form) &&
-        !angular.equals([], command.form)) {
-      modelForm = angular.isArray(command.form) ? command.form : [command.form];
+        !_.isEqual({}, command.form) &&
+        !_.isEqual([], command.form)) {
+      modelForm = Array.isArray(command.form) ? command.form : [command.form];
     } else {
       modelForm = [];
       let required = [];
       let optional = [];
 
-      angular.forEach(modelSF['form'], function(item) {
+      for (var item of modelSF['form']) {
         // Form items can be either a string or dictionary with a key parameter
         let itemKey = typeof item === 'string' ? item : item.key;
 
         // The actual key itself should be an array, but if not we need to make it one
-        itemKey = typeof itemKey === 'string' ? sfPath.parse(itemKey) : itemKey;
+        itemKey = typeof itemKey === 'string' ? parse(itemKey) : itemKey;
         let schemaItem = modelSchema['properties'][itemKey[itemKey.length-1]];
 
         if (schemaItem.optional) {
@@ -124,7 +123,7 @@ export function sfBuilderService($rootScope, sfPath, UtilityService) {
         } else {
           required.push(item);
         }
-      });
+      }
 
       if (optional.length) {
         if (!required.length) {
@@ -167,9 +166,9 @@ export function sfBuilderService($rootScope, sfPath, UtilityService) {
   SFBuilderService.buildCommonSF = function(system, command) {
     // SCHEMA
     let instanceNames = [];
-    angular.forEach(system.instances, function(instance) {
+    for (var instance of system.instances) {
       instanceNames.push(instance.name);
-    });
+    }
 
     let commonSchema = {
       'system': {
@@ -332,7 +331,7 @@ export function sfBuilderService($rootScope, sfPath, UtilityService) {
       builderFunction = SFBuilderService.buildSimpleParameterSF;
     }
 
-    return angular.merge({}, generalSF, builderFunction(parameter, parentKey, inArray));
+    return _.merge({}, generalSF, builderFunction(parameter, parentKey, inArray));
   };
 
   // Build a schema and form for a parameter that's not a dictionary
@@ -389,7 +388,7 @@ export function sfBuilderService($rootScope, sfPath, UtilityService) {
     }
 
     // Now wire up dynamic choices
-    if (parameter.choices && !angular.equals(parameter.choices, {})) {
+    if (parameter.choices && !_.isEqual(parameter.choices, {})) {
       // First determine what form element to use
       if (parameter.choices.display) {
         if (parameter.choices.display === 'typeahead') {
@@ -546,7 +545,7 @@ export function sfBuilderService($rootScope, sfPath, UtilityService) {
       properties: innerSF['schema'],
     };
 
-    if (parameter.optional && parameter.nullable && angular.equals({}, objDefault) && !inArray) {
+    if (parameter.optional && parameter.nullable && _.isEqual({}, objDefault) && !inArray) {
       schema['format'] = 'nullable';
     } else {
       schema['default'] = objDefault;
@@ -619,7 +618,7 @@ export function sfBuilderService($rootScope, sfPath, UtilityService) {
   };
 
   const applyConstraint = function(object, createKey, paramValue) {
-    if (angular.isDefined(paramValue) && paramValue !== null) {
+    if (!_.isUndefined(paramValue) && paramValue !== null) {
       object[createKey] = paramValue;
     }
   };
