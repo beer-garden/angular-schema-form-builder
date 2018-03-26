@@ -3,24 +3,23 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    builder: [path.join(__dirname, 'src', 'builder')],
+    builder: [path.join(__dirname, 'module')],
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',
   },
-  plugins: [
-    /*new webpack.ProvidePlugin({
-      'tv4': 'tv4',
-      '$': 'jquery',
-      'jQuery': 'jquery',
-      'window.jQuery': 'jquery',
-      'moment': 'moment',
-    }),*/
-  ],
+  externals: {
+    'jquery': 'jquery',
+    'angular': 'angular',
+  },
   resolve: {
     symlinks: false,
+    modules: [
+      path.resolve(__dirname, 'src'),
+      path.resolve(__dirname, 'node_modules'),
+    ],
   },
   module: {
     rules: [

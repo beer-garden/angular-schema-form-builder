@@ -39,19 +39,7 @@ ajv@^6.1.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-"angular-sanitize@>= 1.2":
-  version "1.6.9"
-  resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.6.9.tgz#1adba33f6f513e5f93e3aca8071bef53666739ea"
-
-angular-schema-form@1.0.0-alpha.4:
-  version "1.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/angular-schema-form/-/angular-schema-form-1.0.0-alpha.4.tgz#bd8f30ff24fc750fb6778b58e7e92b2a5708708f"
-  dependencies:
-    angular ">= 1.2"
-    angular-sanitize ">= 1.2"
-    tv4 "~1.0.15"
-
-"angular@>= 1.2":
+angular@^1.6.0:
   version "1.6.9"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.9.tgz#bc812932e18909038412d594a5990f4bb66c0619"
 
@@ -4275,10 +4263,6 @@ tunnel-agent@^0.6.0:
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.6.0.tgz#27a5dea06b36b04a0a9966774b290868f0fc40fd"
   dependencies:
     safe-buffer "^5.0.1"
-
-tv4@~1.0.15:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/tv4/-/tv4-1.0.18.tgz#7397769f00358e33bf528dc5c8764c61b6de8245"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
