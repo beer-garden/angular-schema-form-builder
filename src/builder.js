@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import { parse } from 'objectpath';
-import $ from 'jquery';
 
 
 sfBuilderService.$inject = ['UtilityService'];
@@ -539,7 +538,7 @@ export function sfBuilderService(UtilityService) {
       // Otherwise create a deep copy of the default
       case 'array':
         if ( !!parameter.default ) {
-          return $.extend(true, [], parameter.default);
+          return _.merge([], parameter.default);
         } else if ( parameter.default === null && parameter.nullable ) {
           return null;
         } else {
@@ -549,7 +548,7 @@ export function sfBuilderService(UtilityService) {
       // If default is defined then return a deep copy, otherwise an empty object
       case 'object':
         if ( !!parameter.default ) {
-          return $.extend(true, {}, parameter.default);
+          return _.merge({}, parameter.default);
         } else {
           return {};
         }

@@ -4,7 +4,6 @@
   "description": "AngularJS module to generate Angular-Schema-Form from JSON",
   "main": "dist/builder.js",
   "dependencies": {
-    "jquery": "^3.3.1",
     "lodash": "^4.17.5",
     "objectpath": "^1.2.1"
   },
