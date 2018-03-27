@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import { parse } from 'objectpath';
+import $ from 'jquery';
 
 
 sfBuilderService.$inject = ['UtilityService'];
