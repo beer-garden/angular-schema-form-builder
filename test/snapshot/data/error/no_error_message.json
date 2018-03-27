@@ -1,0 +1,15 @@
+{
+  "system": {
+    "id": "5aa06f554b17400001e2fecb"
+  },
+  "description": "Error where the message is None",
+  "name": "no_error_message",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f554b17400001e2fed1",
+  "icon_name": null,
+  "parameters": [],
+  "command_type": "ACTION"
+}

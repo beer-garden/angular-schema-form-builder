@@ -1,0 +1,32 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_list_of_integers",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe95",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Integer",
+      "key": "list_of_i",
+      "multi": true,
+      "choices": null,
+      "description": "Testing List of Integers",
+      "regex": null,
+      "display_name": "A List of Integers",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

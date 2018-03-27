@@ -1,0 +1,36 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_list_of_strings_with_default",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe98",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": [
+        "a",
+        "b",
+        "c"
+      ],
+      "type": "String",
+      "key": "list_of_s",
+      "multi": true,
+      "choices": null,
+      "description": "Testing List of Strings",
+      "regex": null,
+      "display_name": "A List of Strings",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": true,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

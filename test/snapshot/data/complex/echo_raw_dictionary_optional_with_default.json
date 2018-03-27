@@ -1,0 +1,34 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_raw_dictionary_optional_with_default",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2feb0",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": {
+        "foo": "bar"
+      },
+      "type": "Dictionary",
+      "key": "d",
+      "multi": false,
+      "choices": null,
+      "description": "Testing a Blank Dictionary",
+      "regex": null,
+      "display_name": "A Dictionary",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": true,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

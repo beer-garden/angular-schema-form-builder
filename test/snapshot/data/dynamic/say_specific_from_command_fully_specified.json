@@ -1,0 +1,46 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe68"
+  },
+  "description": null,
+  "name": "say_specific_from_command_fully_specified",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe71",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "String",
+      "key": "message",
+      "multi": false,
+      "choices": {
+        "details": {
+          "name": "get_choices",
+          "args": []
+        },
+        "type": "command",
+        "value": {
+          "command": "get_choices",
+          "system": "dynamic",
+          "version": "1.0.0.dev",
+          "instance_name": "default"
+        },
+        "display": "select",
+        "strict": true
+      },
+      "description": "Say what we want",
+      "regex": null,
+      "display_name": "message",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

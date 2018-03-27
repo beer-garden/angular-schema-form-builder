@@ -1,0 +1,32 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_float",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe8e",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Float",
+      "key": "f",
+      "multi": false,
+      "choices": null,
+      "description": "Just want to test Floats",
+      "regex": null,
+      "display_name": "A Float",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

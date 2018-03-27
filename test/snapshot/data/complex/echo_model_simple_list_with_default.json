@@ -1,0 +1,74 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_model_simple_list_with_default",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe9f",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": [
+        {
+          "my_nested_string": "str1",
+          "my_nested_int": 1
+        },
+        {
+          "my_nested_string": "str2",
+          "my_nested_int": 2
+        }
+      ],
+      "type": "Dictionary",
+      "key": "models",
+      "multi": true,
+      "choices": null,
+      "description": "A List of Models",
+      "regex": null,
+      "display_name": "models",
+      "minimum": null,
+      "parameters": [
+        {
+          "default": null,
+          "type": "String",
+          "key": "my_nested_string",
+          "multi": false,
+          "choices": null,
+          "description": "Just Testing a String",
+          "regex": null,
+          "display_name": "My Nested String",
+          "minimum": null,
+          "parameters": [],
+          "nullable": false,
+          "optional": false,
+          "form_input_type": null,
+          "maximum": null
+        },
+        {
+          "default": null,
+          "type": "Integer",
+          "key": "my_nested_int",
+          "multi": false,
+          "choices": null,
+          "description": "Just Testing an Int",
+          "regex": null,
+          "display_name": "My Nested Int",
+          "minimum": null,
+          "parameters": [],
+          "nullable": false,
+          "optional": false,
+          "form_input_type": null,
+          "maximum": null
+        }
+      ],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

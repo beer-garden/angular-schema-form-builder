@@ -1,0 +1,73 @@
+{
+  "description": "Plugin that shows all the cool things beergarden can do",
+  "name": "complex",
+  "metadata": {},
+  "max_instances": 2,
+  "display_name": "",
+  "id": "5aa06f544b17400001e2fe88",
+  "version": "1.0.0.dev0",
+  "icon_name": "",
+  "commands": [],
+  "instances": [
+    {
+      "queue_info": {
+        "url": "amqp://beer_garden:password@rabbitmq:5672/",
+        "request": {
+          "name": "complex.1-0-0-dev0.c1",
+          "args": {
+            "durable": true,
+            "arguments": {
+              "x-max-priority": 1
+            }
+          }
+        },
+        "admin": {
+          "name": "admin.complex.1-0-0-dev0.c1.iu452vqspm",
+          "args": {
+            "auto_delete": true
+          }
+        }
+      },
+      "description": null,
+      "name": "c1",
+      "metadata": {},
+      "status_info": {
+        "heartbeat": 1522098330530
+      },
+      "id": "5aa06f554b17400001e2fec7",
+      "icon_name": null,
+      "queue_type": "rabbitmq",
+      "status": "RUNNING"
+    },
+    {
+      "queue_info": {
+        "url": "amqp://beer_garden:password@rabbitmq:5672/",
+        "request": {
+          "name": "complex.1-0-0-dev0.c2",
+          "args": {
+            "durable": true,
+            "arguments": {
+              "x-max-priority": 1
+            }
+          }
+        },
+        "admin": {
+          "name": "admin.complex.1-0-0-dev0.c2.zg42hwbwo0",
+          "args": {
+            "auto_delete": true
+          }
+        }
+      },
+      "description": null,
+      "name": "c2",
+      "metadata": {},
+      "status_info": {
+        "heartbeat": 1522098330548
+      },
+      "id": "5aa0718f4b17400001e2fef6",
+      "icon_name": null,
+      "queue_type": "rabbitmq",
+      "status": "RUNNING"
+    }
+  ]
+}

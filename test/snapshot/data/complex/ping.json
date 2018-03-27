@@ -1,0 +1,15 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "ping",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f554b17400001e2fec4",
+  "icon_name": null,
+  "parameters": [],
+  "command_type": "ACTION"
+}

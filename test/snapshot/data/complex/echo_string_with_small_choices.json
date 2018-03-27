@@ -1,0 +1,44 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_string_with_small_choices",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2febf",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "String",
+      "key": "s",
+      "multi": false,
+      "choices": {
+        "details": {},
+        "type": "static",
+        "value": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "display": "select",
+        "strict": true
+      },
+      "description": "Just want to test Small Choices",
+      "regex": null,
+      "display_name": "A String",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

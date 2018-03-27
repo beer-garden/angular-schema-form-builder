@@ -1,0 +1,32 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_with_max_value",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fec0",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Integer",
+      "key": "echo_max_value",
+      "multi": false,
+      "choices": null,
+      "description": "Testing integer maximum constraint",
+      "regex": null,
+      "display_name": "An Integer",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": 20
+    }
+  ],
+  "command_type": "ACTION"
+}

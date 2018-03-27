@@ -1,0 +1,42 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_list_of_strings_with_choices",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe97",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "String",
+      "key": "list_of_s",
+      "multi": true,
+      "choices": {
+        "details": {},
+        "type": "static",
+        "value": [
+          "a",
+          "b",
+          "c"
+        ],
+        "display": "select",
+        "strict": true
+      },
+      "description": "Testing List of Strings",
+      "regex": null,
+      "display_name": "A List of Strings",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

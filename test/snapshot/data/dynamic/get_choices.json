@@ -1,0 +1,15 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe68"
+  },
+  "description": null,
+  "name": "get_choices",
+  "output_type": "JSON",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe6a",
+  "icon_name": null,
+  "parameters": [],
+  "command_type": "INFO"
+}

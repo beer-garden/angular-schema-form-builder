@@ -1,0 +1,43 @@
+{
+  "description": "A client that delegates to the Echo and Sleeper plugins",
+  "name": "echo-sleeper",
+  "metadata": {},
+  "max_instances": 1,
+  "display_name": null,
+  "id": "5aa06f564b17400001e2fedd",
+  "version": "1.0.0.dev0",
+  "icon_name": null,
+  "commands": [],
+  "instances": [
+    {
+      "queue_info": {
+        "url": "amqp://beer_garden:password@rabbitmq:5672/",
+        "request": {
+          "name": "echo-sleeper.1-0-0-dev0.default",
+          "args": {
+            "durable": true,
+            "arguments": {
+              "x-max-priority": 1
+            }
+          }
+        },
+        "admin": {
+          "name": "admin.echo-sleeper.1-0-0-dev0.default.tbjpntuw70",
+          "args": {
+            "auto_delete": true
+          }
+        }
+      },
+      "description": null,
+      "name": "default",
+      "metadata": {},
+      "status_info": {
+        "heartbeat": 1522098330516
+      },
+      "id": "5aa06f564b17400001e2fee4",
+      "icon_name": null,
+      "queue_type": "rabbitmq",
+      "status": "RUNNING"
+    }
+  ]
+}

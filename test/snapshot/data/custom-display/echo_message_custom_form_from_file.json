@@ -1,0 +1,79 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe7d"
+  },
+  "description": "form='./resources/say_form.json'",
+  "name": "echo_message_custom_form_from_file",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {
+    "type": "fieldset",
+    "items": [
+      {
+        "type": "tabs",
+        "tabs": [
+          {
+            "title": "Required Fields",
+            "items": [
+              {
+                "type": "help",
+                "helpvalue": "None! :)"
+              }
+            ]
+          },
+          {
+            "title": "Optional Fields",
+            "items": [
+              {
+                "key": "parameters.message"
+              },
+              {
+                "key": "parameters.loud",
+                "description": "No shouting!",
+                "readonly": "true"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "template": null,
+  "id": "5aa06f544b17400001e2fe80",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": "Hello world!",
+      "type": "String",
+      "key": "message",
+      "multi": false,
+      "choices": null,
+      "description": null,
+      "regex": null,
+      "display_name": "message",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    },
+    {
+      "default": false,
+      "type": "Boolean",
+      "key": "loud",
+      "multi": false,
+      "choices": null,
+      "description": null,
+      "regex": null,
+      "display_name": "loud",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": true,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

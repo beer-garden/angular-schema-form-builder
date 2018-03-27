@@ -1,0 +1,48 @@
+{
+  "system": {
+    "id": "5aa06f554b17400001e2fed7"
+  },
+  "description": null,
+  "name": "say",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f554b17400001e2fed8",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": "Hello, World!",
+      "type": "String",
+      "key": "message",
+      "multi": false,
+      "choices": null,
+      "description": "The Message to be Echoed",
+      "regex": null,
+      "display_name": "message",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": true,
+      "form_input_type": null,
+      "maximum": null
+    },
+    {
+      "default": false,
+      "type": "Boolean",
+      "key": "loud",
+      "multi": false,
+      "choices": null,
+      "description": "Determines if Exclamation marks are added",
+      "regex": null,
+      "display_name": "loud",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": true,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

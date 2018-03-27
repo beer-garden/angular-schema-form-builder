@@ -1,0 +1,15 @@
+{
+  "system": {
+    "id": "5aa06f554b17400001e2fecb"
+  },
+  "description": "Error where the message is actually a JSON Serializable list.",
+  "name": "list_error_message",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f554b17400001e2fed0",
+  "icon_name": null,
+  "parameters": [],
+  "command_type": "ACTION"
+}

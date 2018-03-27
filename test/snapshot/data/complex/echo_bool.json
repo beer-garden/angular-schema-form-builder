@@ -1,0 +1,32 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_bool",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe89",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Boolean",
+      "key": "b",
+      "multi": false,
+      "choices": null,
+      "description": "Just want to test Booleans",
+      "regex": null,
+      "display_name": "A Boolean",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

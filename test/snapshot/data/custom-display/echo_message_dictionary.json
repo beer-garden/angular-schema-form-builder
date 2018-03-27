@@ -1,0 +1,32 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe7d"
+  },
+  "description": null,
+  "name": "echo_message_dictionary",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe82",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Dictionary",
+      "key": "message",
+      "multi": false,
+      "choices": null,
+      "description": null,
+      "regex": null,
+      "display_name": "message",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": "textarea",
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

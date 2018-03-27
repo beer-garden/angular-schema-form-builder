@@ -1,0 +1,32 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_with_min_value",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f554b17400001e2fec2",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Integer",
+      "key": "echo_min_value",
+      "multi": false,
+      "choices": null,
+      "description": "Testing integer minimum constraint",
+      "regex": null,
+      "display_name": "An Integer",
+      "minimum": 10,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

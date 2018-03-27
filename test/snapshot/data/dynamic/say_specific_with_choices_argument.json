@@ -1,0 +1,72 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe68"
+  },
+  "description": null,
+  "name": "say_specific_with_choices_argument",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe79",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "String",
+      "key": "message",
+      "multi": false,
+      "choices": {
+        "details": {
+          "name": "get_choices_with_argument",
+          "args": [
+            [
+              "key",
+              "index"
+            ]
+          ]
+        },
+        "type": "command",
+        "value": "get_choices_with_argument(key=${index})",
+        "display": "select",
+        "strict": true
+      },
+      "description": "Say what we want",
+      "regex": null,
+      "display_name": "message",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    },
+    {
+      "default": "a",
+      "type": "String",
+      "key": "index",
+      "multi": false,
+      "choices": {
+        "details": {},
+        "type": "static",
+        "value": [
+          "a",
+          "b",
+          "c"
+        ],
+        "display": "select",
+        "strict": true
+      },
+      "description": null,
+      "regex": null,
+      "display_name": "index",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

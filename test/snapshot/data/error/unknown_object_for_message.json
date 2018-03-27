@@ -1,0 +1,15 @@
+{
+  "system": {
+    "id": "5aa06f554b17400001e2fecb"
+  },
+  "description": "Error where the message is an unknown object type.",
+  "name": "unknown_object_for_message",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f554b17400001e2fed3",
+  "icon_name": null,
+  "parameters": [],
+  "command_type": "ACTION"
+}

@@ -1,0 +1,32 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe7d"
+  },
+  "description": null,
+  "name": "echo_minimalist",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": "\n<h1>Echo Minimalist</h1>\n\n<p>If you have ALLOW_UNSANITIZED_TEMPLATES set to true <b>(DON'T DO THIS UNLESS YOU KNOW WHAT YOU'RE DOING. YOU'VE BEEN WARNED.)</b> in the BrewView config there'll be a form after this. Otherwise you'll just have to use your imagination.</p>\n\n<div>\n    <form action=\"/api/v1/requests\" method=\"POST\">\n        System Name:\n        <input type=\"text\" name=\"system\" value=\"custom-display\" readonly>\n\n        <br>\n        System Version:\n        <input type=\"text\" name=\"system_version\" value=\"1.0.0.dev\" readonly>\n\n        <br>\n        Command Name:\n        <input type=\"text\" name=\"command\" value=\"echo_minimalist\" readonly>\n\n        <br>\n        Instance Name:\n        <input type=\"text\" name=\"instance_name\" value=\"default\" readonly>\n\n        <br>\n        <br>\n        <fieldset>\n            <legend>Parameters</legend>\n            Message:\n            <input type=\"text\" name=\"parameters.message\">\n        </fieldset>\n\n        <br>\n        <input type=\"submit\" value=\"Make Request\">\n    </form>\n</div>\n",
+  "id": "5aa06f544b17400001e2fe85",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Any",
+      "key": "message",
+      "multi": false,
+      "choices": null,
+      "description": null,
+      "regex": null,
+      "display_name": "message",
+      "minimum": null,
+      "parameters": [],
+      "nullable": false,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

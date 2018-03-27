@@ -1,0 +1,65 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_optional_multi_nullable_model_with_model_defaults",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2feaa",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Dictionary",
+      "key": "param",
+      "multi": true,
+      "choices": null,
+      "description": null,
+      "regex": null,
+      "display_name": "param",
+      "minimum": null,
+      "parameters": [
+        {
+          "default": "defaultFooFromModel",
+          "type": "String",
+          "key": "my_foo",
+          "multi": false,
+          "choices": null,
+          "description": "Foo With Defaults.",
+          "regex": null,
+          "display_name": "Foo",
+          "minimum": null,
+          "parameters": [],
+          "nullable": false,
+          "optional": false,
+          "form_input_type": null,
+          "maximum": null
+        },
+        {
+          "default": "defaultBarFromModel",
+          "type": "String",
+          "key": "my_bar",
+          "multi": false,
+          "choices": null,
+          "description": "Bar With Defaults.",
+          "regex": null,
+          "display_name": "Bar",
+          "minimum": null,
+          "parameters": [],
+          "nullable": false,
+          "optional": false,
+          "form_input_type": null,
+          "maximum": null
+        }
+      ],
+      "nullable": true,
+      "optional": true,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}

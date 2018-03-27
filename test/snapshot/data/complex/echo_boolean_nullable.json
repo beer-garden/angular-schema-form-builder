@@ -1,0 +1,32 @@
+{
+  "system": {
+    "id": "5aa06f544b17400001e2fe88"
+  },
+  "description": null,
+  "name": "echo_boolean_nullable",
+  "output_type": "STRING",
+  "schema": {},
+  "form": {},
+  "template": null,
+  "id": "5aa06f544b17400001e2fe8a",
+  "icon_name": null,
+  "parameters": [
+    {
+      "default": null,
+      "type": "Boolean",
+      "key": "b",
+      "multi": false,
+      "choices": null,
+      "description": "Testing a nullable boolean",
+      "regex": null,
+      "display_name": "A boolean",
+      "minimum": null,
+      "parameters": [],
+      "nullable": true,
+      "optional": false,
+      "form_input_type": null,
+      "maximum": null
+    }
+  ],
+  "command_type": "ACTION"
+}
