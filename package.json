@@ -44,7 +44,7 @@
     "moduleDirectories": [
       "node_modules"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/setup_jest.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup_jest.js",
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     }
