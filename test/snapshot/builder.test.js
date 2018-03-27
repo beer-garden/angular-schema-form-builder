@@ -37,11 +37,11 @@ describe('Schemaform builder', () => {
   for (let system in jsonData) {
     for (let command in jsonData[system]['commands']) {
 
-      it('should generate the schema and form', () => {
+      it(`should build the schema and form for ${system}: ${command}`, () => {
         jestExpect(sut.build(
           jsonData[system]['system'],
           jsonData[system]['commands'][command]
-        )).toMatchSnapshot(system + ': ' + command);
+        )).toMatchSnapshot();
       });
     }
   }

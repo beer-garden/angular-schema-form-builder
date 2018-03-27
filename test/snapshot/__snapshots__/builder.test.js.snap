@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_bool 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_bool 1`] = `
 Object {
   "form": Array [
     Object {
@@ -159,7 +159,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_boolean_nullable 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_boolean_nullable 1`] = `
 Object {
   "form": Array [
     Object {
@@ -319,7 +319,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_boolean_nullable_with_true_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_boolean_nullable_with_true_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -479,7 +479,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_boolean_optional_with_false_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_boolean_optional_with_false_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -658,7 +658,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_dates 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_dates 1`] = `
 Object {
   "form": Array [
     Object {
@@ -842,7 +842,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_float 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_float 1`] = `
 Object {
   "form": Array [
     Object {
@@ -1003,7 +1003,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_integer 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_integer 1`] = `
 Object {
   "form": Array [
     Object {
@@ -1164,7 +1164,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_integer_with_lots_of_choices 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_integer_with_lots_of_choices 1`] = `
 Object {
   "form": Array [
     Object {
@@ -1431,7 +1431,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_model 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_model 1`] = `
 Object {
   "form": Array [
     Object {
@@ -1663,7 +1663,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_of_booleans 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_of_booleans 1`] = `
 Object {
   "form": Array [
     Object {
@@ -1843,7 +1843,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_of_booleans_with_maximum 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_of_booleans_with_maximum 1`] = `
 Object {
   "form": Array [
     Object {
@@ -2024,7 +2024,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_of_booleans_with_minimum 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_of_booleans_with_minimum 1`] = `
 Object {
   "form": Array [
     Object {
@@ -2205,7 +2205,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_of_integers 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_of_integers 1`] = `
 Object {
   "form": Array [
     Object {
@@ -2387,7 +2387,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_of_strings 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_of_strings 1`] = `
 Object {
   "form": Array [
     Object {
@@ -2569,7 +2569,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_of_strings_with_choices 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_of_strings_with_choices 1`] = `
 Object {
   "form": Array [
     Object {
@@ -2760,7 +2760,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_of_strings_with_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_of_strings_with_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -2965,7 +2965,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_list_of_strings_with_default_required 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_list_of_strings_with_default_required 1`] = `
 Object {
   "form": Array [
     Object {
@@ -3152,7 +3152,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_message_huge_json 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_message_huge_json 1`] = `
 Object {
   "form": Array [
     Object {
@@ -3294,7 +3294,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_message_info 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_message_info 1`] = `
 Object {
   "form": Array [
     Object {
@@ -3455,7 +3455,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_model 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_model 1`] = `
 Object {
   "form": Array [
     Object {
@@ -4016,7 +4016,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_model_optional 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_model_optional 1`] = `
 Object {
   "form": Array [
     Object {
@@ -4411,7 +4411,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_model_simple_list 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_model_simple_list 1`] = `
 Object {
   "form": Array [
     Object {
@@ -4635,7 +4635,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_model_simple_list_with_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_model_simple_list_with_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -4868,7 +4868,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_model_with_nested_defaults 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_model_with_nested_defaults 1`] = `
 Object {
   "form": Array [
     Object {
@@ -5074,7 +5074,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_model_with_nested_defaults_no_main 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_model_with_nested_defaults_no_main 1`] = `
 Object {
   "form": Array [
     Object {
@@ -5280,7 +5280,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_any_multi_message_with_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_any_multi_message_with_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -5485,7 +5485,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_message_nullable_false 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_message_nullable_false 1`] = `
 Object {
   "form": Array [
     Object {
@@ -5665,7 +5665,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_message_nullable_true_no_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_message_nullable_true_no_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -5844,7 +5844,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_message_nullable_true_non_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_message_nullable_true_non_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -6023,7 +6023,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_message_nullable_true_null_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_message_nullable_true_null_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -6202,7 +6202,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_model_with_defaults 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_model_with_defaults 1`] = `
 Object {
   "form": Array [
     Object {
@@ -6408,7 +6408,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_multi_nullable_model 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_multi_nullable_model 1`] = `
 Object {
   "form": Array [
     Object {
@@ -6651,7 +6651,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_multi_nullable_model_with_both_defaults 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_multi_nullable_model_with_both_defaults 1`] = `
 Object {
   "form": Array [
     Object {
@@ -6901,7 +6901,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_multi_nullable_model_with_model_defaults 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_multi_nullable_model_with_model_defaults 1`] = `
 Object {
   "form": Array [
     Object {
@@ -7146,7 +7146,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_multi_nullable_model_with_multi_defaults 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_multi_nullable_model_with_multi_defaults 1`] = `
 Object {
   "form": Array [
     Object {
@@ -7394,7 +7394,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_optional_multi_nullable_string 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_optional_multi_nullable_string 1`] = `
 Object {
   "form": Array [
     Object {
@@ -7597,7 +7597,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_raw_dictionary 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_raw_dictionary 1`] = `
 Object {
   "form": Array [
     Object {
@@ -7758,7 +7758,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_raw_dictionary_nullable 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_raw_dictionary_nullable 1`] = `
 Object {
   "form": Array [
     Object {
@@ -7919,7 +7919,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_raw_dictionary_optional 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_raw_dictionary_optional 1`] = `
 Object {
   "form": Array [
     Object {
@@ -8098,7 +8098,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_raw_dictionary_optional_with_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_raw_dictionary_optional_with_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -8280,7 +8280,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_raw_dictionary_optional_with_maximum 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_raw_dictionary_optional_with_maximum 1`] = `
 Object {
   "form": Array [
     Object {
@@ -8459,7 +8459,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_any_message 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_any_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -8620,7 +8620,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_any_multi_message 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_any_multi_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -8802,7 +8802,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_any_multi_message_with_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_any_multi_message_with_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -8989,7 +8989,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_message 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -9150,7 +9150,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_message_nullable_false_no_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_message_nullable_false_no_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -9311,7 +9311,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_message_nullable_false_with_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_message_nullable_false_with_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -9473,7 +9473,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_message_nullable_true 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_message_nullable_true 1`] = `
 Object {
   "form": Array [
     Object {
@@ -9634,7 +9634,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_message_nullable_true_with_non_null_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_message_nullable_true_with_non_null_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -9795,7 +9795,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_message_nullable_true_with_null_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_message_nullable_true_with_null_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -9956,7 +9956,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_message_regex 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_message_regex 1`] = `
 Object {
   "form": Array [
     Object {
@@ -10118,7 +10118,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_required_nullable_message_regex 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_required_nullable_message_regex 1`] = `
 Object {
   "form": Array [
     Object {
@@ -10280,7 +10280,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_simple_model 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_simple_model 1`] = `
 Object {
   "form": Array [
     Object {
@@ -10481,7 +10481,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_simple_model_with_default 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_simple_model_with_default 1`] = `
 Object {
   "form": Array [
     Object {
@@ -10685,7 +10685,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_string_with_small_choices 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_string_with_small_choices 1`] = `
 Object {
   "form": Array [
     Object {
@@ -10857,7 +10857,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_with_max_value 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_with_max_value 1`] = `
 Object {
   "form": Array [
     Object {
@@ -11019,7 +11019,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_with_max_value_string 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_with_max_value_string 1`] = `
 Object {
   "form": Array [
     Object {
@@ -11181,7 +11181,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_with_min_value 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_with_min_value 1`] = `
 Object {
   "form": Array [
     Object {
@@ -11343,7 +11343,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: echo_with_min_value_string 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: echo_with_min_value_string 1`] = `
 Object {
   "form": Array [
     Object {
@@ -11505,7 +11505,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: ping 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: ping 1`] = `
 Object {
   "form": Array [
     Object {
@@ -11647,7 +11647,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: prove_env 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: prove_env 1`] = `
 Object {
   "form": Array [
     Object {
@@ -11789,7 +11789,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: complex: weird_parameter_names 1`] = `
+exports[`Schemaform builder should build the schema and form for complex: weird_parameter_names 1`] = `
 Object {
   "form": Array [
     Object {
@@ -12061,7 +12061,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: custom-display: echo_message_custom_form_as_dict 1`] = `
+exports[`Schemaform builder should build the schema and form for custom-display: echo_message_custom_form_as_dict 1`] = `
 Object {
   "form": Array [
     Object {
@@ -12227,7 +12227,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: custom-display: echo_message_custom_form_as_list 1`] = `
+exports[`Schemaform builder should build the schema and form for custom-display: echo_message_custom_form_as_list 1`] = `
 Object {
   "form": Array [
     Object {
@@ -12393,7 +12393,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: custom-display: echo_message_custom_form_from_file 1`] = `
+exports[`Schemaform builder should build the schema and form for custom-display: echo_message_custom_form_from_file 1`] = `
 Object {
   "form": Array [
     Object {
@@ -12593,7 +12593,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: custom-display: echo_message_custom_schema 1`] = `
+exports[`Schemaform builder should build the schema and form for custom-display: echo_message_custom_schema 1`] = `
 Object {
   "form": Array [
     Object {
@@ -12748,7 +12748,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: custom-display: echo_message_dictionary 1`] = `
+exports[`Schemaform builder should build the schema and form for custom-display: echo_message_dictionary 1`] = `
 Object {
   "form": Array [
     Object {
@@ -12911,7 +12911,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: custom-display: echo_message_list_textarea 1`] = `
+exports[`Schemaform builder should build the schema and form for custom-display: echo_message_list_textarea 1`] = `
 Object {
   "form": Array [
     Object {
@@ -13095,7 +13095,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: custom-display: echo_message_textarea 1`] = `
+exports[`Schemaform builder should build the schema and form for custom-display: echo_message_textarea 1`] = `
 Object {
   "form": Array [
     Object {
@@ -13258,7 +13258,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: custom-display: echo_minimalist 1`] = `
+exports[`Schemaform builder should build the schema and form for custom-display: echo_minimalist 1`] = `
 Object {
   "form": Array [
     Object {
@@ -13420,7 +13420,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: _get_attribute 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: _get_attribute 1`] = `
 Object {
   "form": Array [
     Object {
@@ -13582,7 +13582,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: get_choices 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: get_choices 1`] = `
 Object {
   "form": Array [
     Object {
@@ -13725,7 +13725,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: get_choices_dictionary 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: get_choices_dictionary 1`] = `
 Object {
   "form": Array [
     Object {
@@ -13868,7 +13868,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: get_choices_renamed 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: get_choices_renamed 1`] = `
 Object {
   "form": Array [
     Object {
@@ -14011,7 +14011,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: get_choices_with_argument 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: get_choices_with_argument 1`] = `
 Object {
   "form": Array [
     Object {
@@ -14182,7 +14182,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific 1`] = `
 Object {
   "form": Array [
     Object {
@@ -14353,7 +14353,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_dictionary_with_key_reference 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_dictionary_with_key_reference 1`] = `
 Object {
   "form": Array [
     Object {
@@ -14594,7 +14594,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_from_command 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_from_command 1`] = `
 Object {
   "form": Array [
     Object {
@@ -14771,7 +14771,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_from_command_fully_specified 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_from_command_fully_specified 1`] = `
 Object {
   "form": Array [
     Object {
@@ -14951,7 +14951,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_from_command_nullable 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_from_command_nullable 1`] = `
 Object {
   "form": Array [
     Object {
@@ -15128,7 +15128,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_from_url 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_from_url 1`] = `
 Object {
   "form": Array [
     Object {
@@ -15299,7 +15299,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_from_url_nullable 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_from_url_nullable 1`] = `
 Object {
   "form": Array [
     Object {
@@ -15470,7 +15470,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_from_url_with_parameter 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_from_url_with_parameter 1`] = `
 Object {
   "form": Array [
     Object {
@@ -15669,7 +15669,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_non_strict_typeahead 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_non_strict_typeahead 1`] = `
 Object {
   "form": Array [
     Object {
@@ -15839,7 +15839,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_renamed 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_renamed 1`] = `
 Object {
   "form": Array [
     Object {
@@ -16019,7 +16019,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_strict_typeahead 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_strict_typeahead 1`] = `
 Object {
   "form": Array [
     Object {
@@ -16190,7 +16190,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: dynamic: say_specific_with_choices_argument 1`] = `
+exports[`Schemaform builder should build the schema and form for dynamic: say_specific_with_choices_argument 1`] = `
 Object {
   "form": Array [
     Object {
@@ -16401,7 +16401,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: echo: say 1`] = `
+exports[`Schemaform builder should build the schema and form for echo: say 1`] = `
 Object {
   "form": Array [
     Object {
@@ -16599,7 +16599,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: echo: say_json 1`] = `
+exports[`Schemaform builder should build the schema and form for echo: say_json 1`] = `
 Object {
   "form": Array [
     Object {
@@ -16780,7 +16780,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: echo-sleeper: say_error_and_catch 1`] = `
+exports[`Schemaform builder should build the schema and form for echo-sleeper: say_error_and_catch 1`] = `
 Object {
   "form": Array [
     Object {
@@ -16978,7 +16978,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: echo-sleeper: say_error_and_raise 1`] = `
+exports[`Schemaform builder should build the schema and form for echo-sleeper: say_error_and_raise 1`] = `
 Object {
   "form": Array [
     Object {
@@ -17176,7 +17176,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: echo-sleeper: say_sleep 1`] = `
+exports[`Schemaform builder should build the schema and form for echo-sleeper: say_sleep 1`] = `
 Object {
   "form": Array [
     Object {
@@ -17392,7 +17392,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: echo-sleeper: sleep_say 1`] = `
+exports[`Schemaform builder should build the schema and form for echo-sleeper: sleep_say 1`] = `
 Object {
   "form": Array [
     Object {
@@ -17608,7 +17608,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: echo-sleeper: super_sleeper 1`] = `
+exports[`Schemaform builder should build the schema and form for echo-sleeper: super_sleeper 1`] = `
 Object {
   "form": Array [
     Object {
@@ -17842,7 +17842,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: echo-sleeper: super_sleeper_concurrent 1`] = `
+exports[`Schemaform builder should build the schema and form for echo-sleeper: super_sleeper_concurrent 1`] = `
 Object {
   "form": Array [
     Object {
@@ -18076,7 +18076,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: error: dictionary_error_message 1`] = `
+exports[`Schemaform builder should build the schema and form for error: dictionary_error_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -18219,7 +18219,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: error: error_json_output_type_json 1`] = `
+exports[`Schemaform builder should build the schema and form for error: error_json_output_type_json 1`] = `
 Object {
   "form": Array [
     Object {
@@ -18362,7 +18362,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: error: error_string_output_type_json 1`] = `
+exports[`Schemaform builder should build the schema and form for error: error_string_output_type_json 1`] = `
 Object {
   "form": Array [
     Object {
@@ -18505,7 +18505,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: error: json_string_error_message 1`] = `
+exports[`Schemaform builder should build the schema and form for error: json_string_error_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -18648,7 +18648,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: error: list_error_message 1`] = `
+exports[`Schemaform builder should build the schema and form for error: list_error_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -18791,7 +18791,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: error: no_error_message 1`] = `
+exports[`Schemaform builder should build the schema and form for error: no_error_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -18934,7 +18934,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: error: string_error_message 1`] = `
+exports[`Schemaform builder should build the schema and form for error: string_error_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -19077,7 +19077,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: error: unknown_object_for_message 1`] = `
+exports[`Schemaform builder should build the schema and form for error: unknown_object_for_message 1`] = `
 Object {
   "form": Array [
     Object {
@@ -19220,7 +19220,7 @@ Object {
 }
 `;
 
-exports[`Schemaform builder should generate the schema and form: sleeper: sleep 1`] = `
+exports[`Schemaform builder should build the schema and form for sleeper: sleep 1`] = `
 Object {
   "form": Array [
     Object {
