@@ -1,5 +1,5 @@
 {
-  "name": "@beergarden/builder",
+  "name": "@beer-garden/builder",
   "version": "0.0.1",
   "description": "AngularJS module to generate Angular-Schema-Form from JSON",
   "main": "dist/builder.js",

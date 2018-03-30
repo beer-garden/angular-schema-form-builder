@@ -22,7 +22,7 @@ import {sfBuilderService} from 'builder';
 }(this, function (angular) {
   'use strict';
 
-  var moduleName = 'builder';
+  var moduleName = 'beergarden-builder';
   var mod = angular.module(moduleName, []);
 
   mod.run(sfPostProcessor);
