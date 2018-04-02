@@ -3,7 +3,7 @@ const path = require('path');
 
 import {sfBuilderService} from '../../src/builder';
 
-let sut, utilityStub;
+let sut;
 let jsonDir = path.join(__dirname, 'data');
 let jsonData = {};
 
@@ -28,10 +28,7 @@ for (var systemFile of files) {
 describe('Schemaform builder', () => {
 
   beforeEach(() => {
-    utilityStub = {
-      escapeHtml: sinon.stub().callsFake(input => input)
-    };
-    sut = sfBuilderService(utilityStub);
+    sut = sfBuilderService();
   });
 
   for (let system in jsonData) {
