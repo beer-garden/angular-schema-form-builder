@@ -2,15 +2,12 @@ import _ from 'lodash';
 import { parse } from 'objectpath';
 
 
-sfBuilderService.$inject = ['UtilityService'];
-
 /**
  * sfBuilderService - Service for converting systems, commands, and parameters into valid
  * schema-form objects for use by angular-schema-form.
- * @param  {Object} UtilityService UtilityService for version/config API.
  * @return {Object}                A Service for building valid schema-form objects.
  */
-export function sfBuilderService(UtilityService) {
+export function sfBuilderService() {
   let SFBuilderService = {};
 
   /**
@@ -251,7 +248,7 @@ export function sfBuilderService(UtilityService) {
         'title': parameter.display_name,
         'optional': parameter.optional,
         'nullable': parameter.nullable,
-        'description': UtilityService.escapeHtml(parameter.description),
+        'description': _.escape(parameter.description),
       },
       'form': {
         'key': parentKey.concat(parameter.key),

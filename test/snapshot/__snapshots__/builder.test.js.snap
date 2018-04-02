@@ -3423,7 +3423,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "message": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -5634,7 +5634,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": "default required",
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": true,
@@ -5814,7 +5814,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": null,
-            "description": null,
+            "description": "",
             "nullable": true,
             "optional": true,
             "title": "message",
@@ -5993,7 +5993,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": "can be null",
-            "description": null,
+            "description": "",
             "nullable": true,
             "optional": true,
             "title": "message",
@@ -6172,7 +6172,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": null,
-            "description": null,
+            "description": "",
             "nullable": true,
             "optional": true,
             "title": "message",
@@ -6587,7 +6587,7 @@ Object {
         "properties": Object {
           "param": Object {
             "default": null,
-            "description": null,
+            "description": "",
             "items": Object {
               "accordionHeading": "Optional Fields",
               "nullable": false,
@@ -6835,7 +6835,7 @@ Object {
                 "my_foo": "foo",
               },
             ],
-            "description": null,
+            "description": "",
             "items": Object {
               "accordionHeading": "Optional Fields",
               "nullable": false,
@@ -7080,7 +7080,7 @@ Object {
         "properties": Object {
           "param": Object {
             "default": null,
-            "description": null,
+            "description": "",
             "items": Object {
               "accordionHeading": "Optional Fields",
               "nullable": false,
@@ -7330,7 +7330,7 @@ Object {
                 "my_nested_string": "hi",
               },
             ],
-            "description": null,
+            "description": "",
             "items": Object {
               "accordionHeading": "Optional Fields",
               "nullable": false,
@@ -7558,7 +7558,7 @@ Object {
               "hello",
               "there",
             ],
-            "description": null,
+            "description": "",
             "items": Object {
               "nullable": true,
               "optional": true,
@@ -9118,7 +9118,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "message": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -9279,7 +9279,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "message": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -9441,7 +9441,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": "cannot be null",
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -9603,7 +9603,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": null,
-            "description": null,
+            "description": "",
             "nullable": true,
             "optional": false,
             "requiredAllowNull": true,
@@ -9764,7 +9764,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": "can be null",
-            "description": null,
+            "description": "",
             "nullable": true,
             "optional": false,
             "requiredAllowNull": true,
@@ -9925,7 +9925,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": null,
-            "description": null,
+            "description": "",
             "nullable": true,
             "optional": false,
             "requiredAllowNull": true,
@@ -10085,7 +10085,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "message": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -10248,7 +10248,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": null,
-            "description": null,
+            "description": "",
             "nullable": true,
             "optional": false,
             "pattern": "^Hi.*",
@@ -11960,7 +11960,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "command": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -11972,7 +11972,7 @@ Object {
             ],
           },
           "comment": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -11984,7 +11984,7 @@ Object {
             ],
           },
           "instance_name": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -11996,7 +11996,7 @@ Object {
             ],
           },
           "parameters": Object {
-            "description": null,
+            "description": "",
             "items": Object {
               "failNull": true,
               "nullable": false,
@@ -12017,7 +12017,7 @@ Object {
             ],
           },
           "system": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -12029,7 +12029,7 @@ Object {
             ],
           },
           "system_version": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -12195,7 +12195,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": "Can't change me! Hahaha!",
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -12361,7 +12361,7 @@ Object {
         "properties": Object {
           "message": Object {
             "default": "Can't change me! Hahaha!",
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -12550,7 +12550,7 @@ Object {
         "properties": Object {
           "loud": Object {
             "default": false,
-            "description": null,
+            "description": "",
             "nullable": false,
             "optional": true,
             "title": "loud",
@@ -12561,7 +12561,7 @@ Object {
           },
           "message": Object {
             "default": "Hello world!",
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -12879,7 +12879,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "message": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -13054,7 +13054,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "messages": Object {
-            "description": null,
+            "description": "",
             "items": Object {
               "failNull": true,
               "nullable": false,
@@ -13226,7 +13226,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "message": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -13388,7 +13388,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "message": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -13550,7 +13550,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "attribute": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -14150,7 +14150,7 @@ Object {
       "parameters": Object {
         "properties": Object {
           "key": Object {
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -14551,7 +14551,7 @@ Object {
         "properties": Object {
           "dict_key": Object {
             "default": null,
-            "description": null,
+            "description": "",
             "nullable": true,
             "optional": false,
             "requiredAllowNull": true,
@@ -14563,7 +14563,7 @@ Object {
           },
           "message": Object {
             "default": null,
-            "description": "I depend on 'dict_key'",
+            "description": "I depend on &#39;dict_key&#39;",
             "nullable": true,
             "optional": false,
             "requiredAllowNull": true,
@@ -15625,7 +15625,7 @@ Object {
         "properties": Object {
           "index": Object {
             "default": "a",
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
@@ -16357,7 +16357,7 @@ Object {
         "properties": Object {
           "index": Object {
             "default": "a",
-            "description": null,
+            "description": "",
             "failNull": true,
             "nullable": false,
             "optional": false,
