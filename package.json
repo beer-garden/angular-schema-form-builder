@@ -2,7 +2,18 @@
   "name": "@beer-garden/builder",
   "version": "0.0.1",
   "description": "AngularJS module to generate Angular-Schema-Form from JSON",
+  "author": "The Beergarden Team",
+  "contributors": [],
+  "license": "MIT",
+  "keywords": [
+    "angular"
+  ],
   "main": "dist/builder.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js --mode production",
+    "build:dev": "webpack --config webpack.common.js --mode development",
+    "test": "jest"
+  },
   "dependencies": {
     "lodash": "^4.17.5",
     "objectpath": "^1.2.1"
@@ -26,13 +37,6 @@
     "webpack-cli": "^2.0.13",
     "webpack-merge": "^4.1.2"
   },
-  "scripts": {
-    "dev": "webpack --config webpack.config.js --mode development",
-    "test": "jest"
-  },
-  "keywords": [
-    "angular"
-  ],
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js"
@@ -48,7 +52,5 @@
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     }
-  },
-  "author": "",
-  "license": "MIT"
+  }
 }
