@@ -8,8 +8,9 @@ module.exports = {
     publicPath: '/dist/',
   },
   externals: {
-    'jquery': 'jquery',
     'angular': 'angular',
+    'jquery': 'jquery',
+    'lodash': 'lodash',
   },
   resolve: {
     symlinks: false,
