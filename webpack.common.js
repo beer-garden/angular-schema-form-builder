@@ -6,6 +6,8 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',
+    library: '[name]',
+    libraryTarget: 'umd',
   },
   externals: {
     'angular': 'angular',
