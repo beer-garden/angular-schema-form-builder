@@ -2,9 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: {
-    builder: [path.join(__dirname, 'module')],
-  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),

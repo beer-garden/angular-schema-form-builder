@@ -10,8 +10,9 @@
   ],
   "main": "dist/builder.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js --mode production",
-    "build:dev": "webpack --config webpack.common.js --mode development",
+    "build": "yarn build:dev && yarn build:prod",
+    "build:dev": "webpack --config webpack.dev.js --mode development",
+    "build:prod": "webpack --config webpack.prod.js --mode production",
     "test": "jest"
   },
   "dependencies": {
