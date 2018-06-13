@@ -14609,7 +14609,9 @@ Object {
           ],
           "function": "createRequestWrapper",
         },
-        "updateOn": Array [],
+        "updateOn": Array [
+          "instance_name",
+        ],
       },
       "key": Array [
         "parameters",
@@ -14789,7 +14791,9 @@ Object {
           ],
           "function": "createRequestWrapper",
         },
-        "updateOn": Array [],
+        "updateOn": Array [
+          "instance_name",
+        ],
       },
       "key": Array [
         "parameters",
@@ -14966,7 +14970,9 @@ Object {
           ],
           "function": "createRequestWrapper",
         },
-        "updateOn": Array [],
+        "updateOn": Array [
+          "instance_name",
+        ],
       },
       "key": Array [
         "parameters",
@@ -16210,6 +16216,7 @@ Object {
           "function": "createRequestWrapper",
         },
         "updateOn": Array [
+          "instance_name",
           "parameters.index",
         ],
       },
