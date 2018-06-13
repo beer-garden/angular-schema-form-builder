@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-import {sfBuilderService} from '../../src/builder';
+import {sfBuilderService} from '../../src/service';
 
 let sut;
 let jsonDir = path.join(__dirname, 'data');

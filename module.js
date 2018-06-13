@@ -3,7 +3,7 @@ import angular from 'angular';
 
 import {sfPostProcessor} from 'postProcessor';
 import {sfErrorMessageConfig} from 'errorConfig';
-import {sfBuilderService} from 'builder';
+import {sfBuilderService} from 'service';
 
 let moduleName = 'beer-garden.builder';
 
@@ -13,4 +13,3 @@ angular.module(moduleName, [])
   .factory('SFBuilderService', sfBuilderService);
 
 export default moduleName;
-
