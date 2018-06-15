@@ -1,3 +1,8 @@
+import _ from 'lodash';
+
+// List of fields that shouldn't have `parentKey.` prefixed if they're used as
+// an updateOn
+let specialFields = ['instance_name'];
 
 export function setDynamicChoices(schema, form, parameter, parentKey) {
   // First determine what form element to use
@@ -27,7 +32,7 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
     form['choices'] = {titleMap: parameter.choices.value};
 
     if (parameter.choices.details && parameter.choices.details.key_reference) {
-      let field = parentKey + '.' + parameter.choices.details.key_reference;
+      let field = fieldPath(parameter.choices.details.key_reference, parentKey);
 
       form['choices']['updateOn'] = field;
       form['choices']['transforms'] = [{lookupField: field}];
@@ -43,14 +48,14 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
 
     for (let i=0; i<parameter.choices.details['args'].length; i++) {
       let pair = parameter.choices.details['args'][i];
-      let field = parentKey + '.' + pair[1];
+      let field = fieldPath(pair[1], parentKey);
 
       form['choices']['updateOn'].push(field);
       form['choices']['httpGet']['queryParameterFields'][pair[0]] = field;
     }
   } else if (parameter.choices.type === 'command') {
     form['choices'] = {
-      updateOn: [],
+      updateOn: ['instance_name'],
       callback: {
         function: 'createRequestWrapper',
         arguments: [{
@@ -63,9 +68,13 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
 
     for (let i=0; i<parameter.choices.details['args'].length; i++) {
       let pair = parameter.choices.details['args'][i];
-      let field = parentKey + '.' + pair[1];
+      let field = fieldPath(pair[1], parentKey);
 
-      form['choices']['updateOn'].push(field);
+      // special fields are already in this, don't want to duplicate
+      if (!specialField(field)) {
+        form['choices']['updateOn'].push(field);
+      }
+
       form['choices']['callback']['argumentFields'].push(field);
       form['choices']['callback']['arguments'][0]['parameterNames'].push(pair[0]);
     }
@@ -91,3 +100,11 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
     form['choices']['transforms'].push('fixNull');
   }
 };
+
+function fieldPath(field, parentKey) {
+  return specialField(field) ? field : parentKey + '.' + field;
+}
+
+function specialField(field) {
+  return _.includes(specialFields, field);
+}
