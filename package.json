@@ -1,6 +1,6 @@
 {
   "name": "@beer-garden/builder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "AngularJS module to generate Angular-Schema-Form from JSON",
   "author": "The Beergarden Team",
   "contributors": [],
@@ -38,6 +38,9 @@
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
     "webpack-merge": "^4.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "jest": {
     "collectCoverageFrom": [
