@@ -2,6 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  entry: {
+    'builder': [path.join(__dirname, 'module')],
+    'builder.min': [path.join(__dirname, 'module')],
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -30,4 +34,13 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      include: /\.min\.js$/,
+      sourceMap: true
+    }),
+  ],
 };

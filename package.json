@@ -10,8 +10,7 @@
   ],
   "main": "dist/builder.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "build:dev": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.js",
     "clean": "rm -r dist/",
     "test": "jest"
   },
@@ -34,8 +33,7 @@
     "jest": "^22.4.3",
     "sinon": "^4.4.8",
     "sinon-chai": "^3.0.0",
-    "webpack": "^3.4.1",
-    "webpack-merge": "^4.1.2"
+    "webpack": "^3.4.1"
   },
   "publishConfig": {
     "access": "public"
