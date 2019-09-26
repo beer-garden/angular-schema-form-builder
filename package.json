@@ -10,9 +10,8 @@
   ],
   "main": "dist/builder.js",
   "scripts": {
-    "build": "yarn build:dev && yarn build:prod",
+    "build": "webpack --config webpack.prod.js --mode production",
     "build:dev": "webpack --config webpack.dev.js --mode development",
-    "build:prod": "webpack --config webpack.prod.js --mode production",
     "clean": "rm -r dist/",
     "test": "jest"
   },
