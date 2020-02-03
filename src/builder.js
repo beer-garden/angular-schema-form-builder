@@ -41,6 +41,10 @@ export function buildCommonSF(system, command) {
       'title': 'Instance Name', 'type': 'string',
       'required': true,
     },
+    'namespace': {
+      'title': 'Namespace', 'type': 'string',
+      'default': system.namespace, 'required': true,
+    },
   };
 
   if (system.instances.length == 1) {
