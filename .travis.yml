@@ -16,3 +16,6 @@ deploy:
   on:
     tags: true
     repo: beer-garden/angular-schema-form-builder
+
+  # TODO - remove when not beta anymore
+  tag: beta
