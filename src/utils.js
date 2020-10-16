@@ -16,6 +16,7 @@ export function baseSchemaForm(parameterType) {
     string: 'string',
     date: 'integer',
     datetime: 'integer',
+    base64: 'file',
   };
 
   // We want the schema type to default to 'string' and always also allow 'null'.
@@ -31,6 +32,8 @@ export function baseSchemaForm(parameterType) {
     form['options'] = {format: 'MM/DD/YYYY'};
   } else if (type === 'datetime') {
     schema['format'] = 'datetime';
+  } else if (type === 'base64') {
+    schema['format'] = 'base64';
   }
 
   return {schema: schema, form: form};
