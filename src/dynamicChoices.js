@@ -85,6 +85,7 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
         system: parameter.choices.value.system,
         system_version: parameter.choices.value.system_version,
         instance_name: parameter.choices.value.instance_name,
+        namespace: parameter.choices.value.namespace,
       });
     }
   } else {
