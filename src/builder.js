@@ -23,6 +23,10 @@ export function buildCommonSF(system, command) {
       'title': 'System Version', 'type': 'string',
       'default': system.version, 'required': true,
     },
+    'namespace': {
+      'title': 'Namespace', 'type': 'string',
+      'default': system.namespace, 'required': true,
+    },
     'command': {
       'title': 'Command Name', 'type': 'string',
       'default': command.name, 'required': true,
