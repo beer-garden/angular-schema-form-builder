@@ -66,6 +66,10 @@ export function correctDefault(parameter, type) {
         return {};
       }
 
+    // Don't allow defaults for the base64 parameter, this could be dangerous.
+    case 'base64':
+      return undefined;
+
     default:
       return parameter.default;
   }
