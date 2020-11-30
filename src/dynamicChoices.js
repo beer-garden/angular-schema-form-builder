@@ -103,7 +103,11 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
 };
 
 function fieldPath(field, parentKey) {
-  return specialField(field) ? field : parentKey + '.' + field;
+  if (specialField(field)) {
+    return field;
+  }
+
+  return _.join(_.concat(parentKey, field), '.');
 }
 
 function specialField(field) {
