@@ -11,6 +11,7 @@
   "main": "dist/builder.js",
   "scripts": {
     "build": "webpack --config webpack.js",
+    "watch": "webpack --watch --config webpack.js",
     "clean": "rm -r dist/",
     "test": "jest"
   },

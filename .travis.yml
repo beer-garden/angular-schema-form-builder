@@ -1,18 +1,21 @@
+os: linux
+dist: xenial
 language: node_js
+
 node_js:
-  - lts/*
+- lts/*
 
 script:
-  - echo "Fix the tests at some point please!"
+- echo "Fix the tests at some point please!"
 
 before_deploy: npm run build
-
 deploy:
   provider: npm
   skip_cleanup: true
-  email: buildbot@beer-garden.io
-  api_key:
-    secure: LeJxpWKP23piJ4DPAH5+nuUrRwFpbmRM0EY8nd63VOdDiLTSJGtrOaurMQ8NDivyYsvSS9GUxdqO7Ns+pX+/gZh3wQbOThELpe2hoMDSbl+tJcUPbEFBBqWpwl3hU/pU7A4RtoiVp63vRurgQxZQLLBFX5oL0bu9BzB2BAC8WBIy9oNtxT1SOM+HA3LDR+n78JJTcl1pOj9V2WH5jXGPSooRsZSRBCr5TIGt0CB5iZlAAr/pQPgHFMLIpY5Js/UIoOrVwwidFpbB9npEWnLaVeCr5+PTe970WnQIg6UKF2h7U2k5fRLK4Lt2zaUke+mH+aUhDgAUN5oDsdLNW/sBrwAqVwj1i6ZoQbpcl9YCHMGbOJWpzHSiEMmxIPAHDx6lj1KzGhDRcQCY9Yv/ZcgAadJ2BvdyM82Y9RKUvHoN7Gfxu+rcZdgtM0Ipq15hV5w/isAbY/WgvaOqiAyqj7ZBCcydXWBSOwsUNzXHW0nVMANM1XNzR7YxQbtueptPlz37/PVLF7W9CLDZvsHGW17QMyrWntZR+1PHuSTakkKdbN8QPnlQBtRFMnS3Gv+qiqYMvOnH63LEWZ/KwnQqF3sD2GIJPyJPXyf0886jyoKb5WwDouBaUWpzqCX9GDCcwT9qTMgXY1bagtDpE9cMl7SHqj92QUGCeeUOZYqMVzTBXo4=
   on:
     tags: true
     repo: beer-garden/angular-schema-form-builder
+  email: beerbuildbot
+  api_token:
+    secure: n6eoWYgwvEzBzHD/iDm24ruK2fkeMijtSHyuclhzQiRwNQ46yf+U+pB0z/IfeY2N0ikmr/JfwXe4WvoMrzGrl3B7gr1nmnXeawkE7ypYu1m1xIwQDiW1yafgaxxdiv3m7UEjxIRsZ/bevpjYj3yBj6YAuOCtWiom7yXwaPmBSNv5p1nENtHOpzUTtc2qYm17zP6346ovo5vP38qUBJp2v1gwIxquBa3AAcgWk1bOGTPhL2fkv4WeY8QOsRiLiRY+v/8xnlVtnX1GzOIqvznNX23+yXxJqcmhfFkU0AuMGg5QOb8C/kEGbGr1n/gJHpvqF8HapE/rQ2nKHZrz3OevgJEQOvKbsMGpIc7zW1SZpYeGjByJcMAw6eR6N4dOdXGqwJNeNGeqfkMnxSTFG+rgqmA6AUnwn4J9J2D/qvUz7FQRgrSYF9Ih30UVFudlPdBOiKxr1WnQknO5toSaamiiJV2mdBdFzKMWbby8eMrenwbKIiL25znsYdMuKDLOEkFiCML2bVuVyesXt2s0yDloKZ2WjoWhNl8XWiVOP5hiuM/A9wM+R3Fk2EFqPhXNHULdbdAfH8A/8+q30RP/UlaFnVOnxz4nAyHgu+tP74k7qq3sXV202yrygCIFa+VfWPtxXPzIfniVaDeK1MPXwjZSOMDNTyKKb7BlrQC2NNKNjdk=
+
