@@ -16,7 +16,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
           
       - name: Authenticate with package registry
-        run:
+        run: |
           echo "//npm.pkg.github.com:_authToken=${{ secrets.NPM_TOKEN }}" >
           ~/.npmrc
           
