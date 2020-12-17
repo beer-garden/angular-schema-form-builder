@@ -17,11 +17,11 @@ jobs:
           
       - name: Authenticate with package registry
         run: |
-          echo "//npm.pkg.github.com:_authToken=${{ secrets.NPM_TOKEN }}" >
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >
           ~/.npmrc
           
       - run: npm run install
       - run: npm run build
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
