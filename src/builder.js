@@ -13,6 +13,7 @@ export function buildCommonSF(system, command) {
   for (var instance of system.instances) {
     instanceNames.push(instance.name);
   }
+  instanceNames.sort();
 
   let commonSchema = {
     'system': {
