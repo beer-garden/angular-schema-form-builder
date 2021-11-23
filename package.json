@@ -15,7 +15,8 @@
     "clean": "rm -r dist/"
   },
   "dependencies": {
-    "objectpath": "^1.2.1"
+    "objectpath": "^1.2.1",
+    "package.json": "^2.0.1"
   },
   "peerDependencies": {
     "angular": "^1.6.0",
