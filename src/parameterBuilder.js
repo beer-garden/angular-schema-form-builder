@@ -1,8 +1,8 @@
-import _ from 'lodash';
+import _ from "lodash";
 
-import {buildModelSF} from './builder';
-import {setDynamicChoices} from './dynamicChoices';
-import {baseSchemaForm, correctDefault, applyConstraint} from './utils';
+import { buildModelSF } from "./builder";
+import { setDynamicChoices } from "./dynamicChoices";
+import { baseSchemaForm, correctDefault, applyConstraint } from "./utils";
 
 /**
  * buildParameterSF - Build a schema and form for an individual parameter.
@@ -14,19 +14,19 @@ import {baseSchemaForm, correctDefault, applyConstraint} from './utils';
 export function buildParameterSF(parameter, parentKey, inArray) {
   // Schema and form that are the same across all parameters
   let generalSF = {
-    'schema': {
-      'title': parameter.display_name,
-      'optional': parameter.optional,
-      'nullable': parameter.nullable,
-      'description': _.escape(parameter.description),
+    schema: {
+      title: parameter.display_name,
+      optional: parameter.optional,
+      nullable: parameter.nullable,
+      description: _.escape(parameter.description),
     },
-    'form': {
-      'key': parentKey.concat(parameter.key),
+    form: {
+      key: parentKey.concat(parameter.key),
     },
   };
 
   if (inArray) {
-    generalSF['form']['key'].push('');
+    generalSF["form"]["key"].push("");
   }
 
   // Type-specific schema / forms
@@ -40,17 +40,17 @@ export function buildParameterSF(parameter, parentKey, inArray) {
   }
 
   return _.merge({}, generalSF, builderFunction(parameter, parentKey, inArray));
-};
+}
 
 // Build a schema and form for a parameter that's not a dictionary
 // and not an array
 export function buildSimpleParameterSF(parameter, parentKey, inArray) {
   let baseSF = baseSchemaForm(parameter.type);
-  let schema = baseSF['schema'];
-  let form = baseSF['form'];
+  let schema = baseSF["schema"];
+  let form = baseSF["form"];
 
   // If the set a form_input_type, we apply it to the form
-  applyConstraint(form, 'type', parameter.form_input_type);
+  applyConstraint(form, "type", parameter.form_input_type);
 
   // Deal with 'requiredness'
   // ASF does some mangling before its 'required' validation, most annoyingly making empty
@@ -59,13 +59,13 @@ export function buildSimpleParameterSF(parameter, parentKey, inArray) {
   // Booleans are special. The only way they could 'fail' would be if they were nullable
   // with a null default. If that's allowed it would require two clicks to be 'false' and
   // look the same as how it started.
-  if (schema['type'].indexOf('boolean') === -1) {
+  if (schema["type"].indexOf("boolean") === -1) {
     if (!parameter.optional) {
-      schema[parameter.nullable ? 'requiredAllowNull' : 'required'] = true;
+      schema[parameter.nullable ? "requiredAllowNull" : "required"] = true;
     }
 
     if (!parameter.nullable) {
-      schema['failNull'] = true;
+      schema["failNull"] = true;
     }
   }
 
@@ -76,22 +76,24 @@ export function buildSimpleParameterSF(parameter, parentKey, inArray) {
     // FYI - It's a good idea to only specify a default for things that need it, as a default
     // can cause ASF to treat the field differently.
     // Parameters with NO default will not show in the model preview until they get a value.
-    let defaultValue = correctDefault(parameter, schema['type']);
+    let defaultValue = correctDefault(parameter, schema["type"]);
     if (defaultValue !== undefined) {
       if (defaultValue !== null || parameter.nullable) {
-        schema['default'] = defaultValue;
+        schema["default"] = defaultValue;
       }
     }
 
     // Now map constraints that depend on the type into the schema and form
-    if (schema['type'].indexOf('string') !== -1) {
-      applyConstraint(schema, 'maxLength', parameter['maximum']);
-      applyConstraint(schema, 'minLength', parameter['minimum']);
-      applyConstraint(schema, 'pattern', parameter['regex']);
-    } else if (schema['type'].indexOf('integer') !== -1 ||
-               schema['type'].indexOf('number') !== -1) {
-      applyConstraint(schema, 'maximum', parameter['maximum']);
-      applyConstraint(schema, 'minimum', parameter['minimum']);
+    if (schema["type"].indexOf("string") !== -1) {
+      applyConstraint(schema, "maxLength", parameter["maximum"]);
+      applyConstraint(schema, "minLength", parameter["minimum"]);
+      applyConstraint(schema, "pattern", parameter["regex"]);
+    } else if (
+      schema["type"].indexOf("integer") !== -1 ||
+      schema["type"].indexOf("number") !== -1
+    ) {
+      applyConstraint(schema, "maximum", parameter["maximum"]);
+      applyConstraint(schema, "minimum", parameter["minimum"]);
     }
   }
 
@@ -100,8 +102,8 @@ export function buildSimpleParameterSF(parameter, parentKey, inArray) {
     setDynamicChoices(schema, form, parameter, parentKey);
   }
 
-  return {schema: schema, form: form};
-};
+  return { schema: schema, form: form };
+}
 
 export function buildMultiParameterSF(parameter, parentKey) {
   // Multi parameters are represented as 'array' types with their real type
@@ -112,64 +114,70 @@ export function buildMultiParameterSF(parameter, parentKey) {
   // Now tweak the result to make sense as an array item
   // We are assuming the default for this parameter is intended for the array,
   // so remove it from the child
-  delete nestedSF['schema']['default'];
+  delete nestedSF["schema"]["default"];
 
   // Tweak the display a bit so it looks better inside the array
-  nestedSF['form']['notitle'] = true;
-  nestedSF['form']['htmlClass'] = 'clear-right';
-  delete nestedSF['schema']['description'];
+  nestedSF["form"]["notitle"] = true;
+  nestedSF["form"]["htmlClass"] = "clear-right";
+  delete nestedSF["schema"]["description"];
 
   // A nullable object is a distinct thing and doesn't make sense inside an
   // array (would be the same as an empty array)
-  if (nestedSF['schema']['type'] === 'object') {
-    nestedSF['schema']['nullable'] = false;
+  if (nestedSF["schema"]["type"] === "object") {
+    nestedSF["schema"]["nullable"] = false;
   }
 
   let arraySF = {
     schema: {
-      type: ['array', 'null'],
-      items: nestedSF['schema'],
+      type: ["array", "null"],
+      items: nestedSF["schema"],
     },
     form: {
       startEmpty: !!parameter.nullable,
-      items: [nestedSF['form']],
+      items: [nestedSF["form"]],
     },
   };
 
   // Only add a default if necessary, otherwise it breaks things
-  let arrayDefault = correctDefault(parameter, 'array');
+  let arrayDefault = correctDefault(parameter, "array");
   if (arrayDefault !== undefined) {
-    arraySF['schema']['default'] = arrayDefault;
-    arraySF['form']['startEmpty'] = true;
+    arraySF["schema"]["default"] = arrayDefault;
+    arraySF["form"]["startEmpty"] = true;
   }
 
   // Add array constraints
-  applyConstraint(arraySF['schema'], 'maxItems', parameter['maximum']);
-  applyConstraint(arraySF['schema'], 'minItems', parameter['minimum']);
+  applyConstraint(arraySF["schema"], "maxItems", parameter["maximum"]);
+  applyConstraint(arraySF["schema"], "minItems", parameter["minimum"]);
 
   return arraySF;
-};
+}
 
 export function buildModelParameterSF(parameter, parentKey, inArray) {
-  let newParentKey = inArray ?
-    parentKey.concat(parameter.key, '') : parentKey.concat(parameter.key);
+  let newParentKey = inArray
+    ? parentKey.concat(parameter.key, "")
+    : parentKey.concat(parameter.key);
   let innerSF = buildModelSF(parameter, newParentKey);
-  let objDefault = correctDefault(parameter, 'object');
+  let objDefault = correctDefault(parameter, "object");
 
   let form = {};
   let schema = {
-    type: 'object',
-    partition: '!optional',
-    accordionHeading: 'Optional Fields',
-    properties: innerSF['schema'],
+    type: "object",
+    partition: "!optional",
+    accordionHeading: "Optional Fields",
+    properties: innerSF["schema"],
   };
 
-  if (parameter.optional && parameter.nullable && _.isEqual({}, objDefault) && !inArray) {
-    schema['format'] = 'nullable';
+  if (
+    parameter.optional &&
+    parameter.nullable &&
+    _.isEqual({}, objDefault) &&
+    !inArray
+  ) {
+    schema["format"] = "nullable";
   } else {
-    schema['default'] = objDefault;
-    form['items'] = innerSF['form'];
+    schema["default"] = objDefault;
+    form["items"] = innerSF["form"];
   }
 
-  return {schema: schema, form: form};
-};
+  return { schema: schema, form: form };
+}
