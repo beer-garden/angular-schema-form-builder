@@ -87,6 +87,7 @@ export function sfBuilderService() {
 
     // Tie in the model schema in the correct place
     commonSF['schema']['parameters'] = modelSchema;
+    commonSF['schema']['parameters']['default'] = {};
 
     return {
       schema: {type: 'object', properties: commonSF['schema']},
@@ -95,4 +96,4 @@ export function sfBuilderService() {
   };
 
   return SFBuilderService;
-};
+}

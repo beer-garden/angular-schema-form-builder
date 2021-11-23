@@ -17,6 +17,7 @@ export function baseSchemaForm(parameterType) {
     date: 'integer',
     datetime: 'integer',
     base64: 'file',
+    bytes: 'file',
   };
 
   // We want the schema type to default to 'string' and always also allow 'null'.
@@ -34,10 +35,12 @@ export function baseSchemaForm(parameterType) {
     schema['format'] = 'datetime';
   } else if (type === 'base64') {
     schema['format'] = 'base64';
+  } else if (type === 'bytes') {
+    schema['format'] = 'bytes';
   }
 
   return {schema: schema, form: form};
-};
+}
 
 /**
  * correctDefault - Get the correct default based on parameter type
@@ -66,14 +69,14 @@ export function correctDefault(parameter, type) {
         return {};
       }
 
-    // Don't allow defaults for the base64 parameter, this could be dangerous.
-    case 'base64':
+    // Don't allow defaults for the base64 or bytes parameter, this could be dangerous.
+    case 'base64' | 'bytes':
       return undefined;
 
     default:
       return parameter.default;
   }
-};
+}
 
 /**
  * applyConstraint - Apply a contraint
@@ -82,4 +85,4 @@ export function applyConstraint(object, createKey, paramValue) {
   if (!_.isUndefined(paramValue) && paramValue !== null) {
     object[createKey] = paramValue;
   }
-};
+}
