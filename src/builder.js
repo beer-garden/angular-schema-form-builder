@@ -103,7 +103,7 @@ export function buildCommonSF(system, command) {
         disableErrorState: true,
         readonly: true,
         required: true,
-        htmlClass: "col-md-3",
+        htmlClass: "col-md-2",
       },
       {
         key: "command",
@@ -118,9 +118,17 @@ export function buildCommonSF(system, command) {
         key: "instance_name",
         feedback: false,
         disableSuccessState: true,
-        htmlClass: "col-md-3",
+        htmlClass: "col-md-2",
         type: "select",
         choices: { titleMap: instanceNames },
+      },
+      {
+        key: "command_type",
+        feedback: false,
+        disableSuccessState: true,
+        htmlClass: "col-md-2",
+        type: "select",
+        choices: { titleMap: commandTypes },
       },
     ],
   };
