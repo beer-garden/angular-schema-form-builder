@@ -14,6 +14,8 @@ export function buildCommonSF(system, command) {
   }
   instanceNames.sort();
 
+  let commandTypes = ["ACTION", "INFO", "TEMP"]
+
   let commonSchema = {
     system: {
       title: "System Name",
@@ -58,12 +60,19 @@ export function buildCommonSF(system, command) {
       type: "string",
       required: true,
     },
+    command_type: {
+      title: "Command Type",
+      type: "string",
+      required: true,
+    },
   };
 
   if (system.instances.length == 1) {
     commonSchema["instance_name"]["default"] = instanceNames[0];
     commonSchema["instance_name"]["readonly"] = true;
   }
+
+  commonSchema["command_type"]["default"] = command.command_type
 
   // FORM
   const instanceHelp = {
@@ -94,7 +103,7 @@ export function buildCommonSF(system, command) {
         disableErrorState: true,
         readonly: true,
         required: true,
-        htmlClass: "col-md-3",
+        htmlClass: "col-md-2",
       },
       {
         key: "command",
@@ -109,9 +118,17 @@ export function buildCommonSF(system, command) {
         key: "instance_name",
         feedback: false,
         disableSuccessState: true,
-        htmlClass: "col-md-3",
+        htmlClass: "col-md-2",
         type: "select",
         choices: { titleMap: instanceNames },
+      },
+      {
+        key: "command_type",
+        feedback: false,
+        disableSuccessState: true,
+        htmlClass: "col-md-2",
+        type: "select",
+        choices: { titleMap: commandTypes },
       },
     ],
   };
