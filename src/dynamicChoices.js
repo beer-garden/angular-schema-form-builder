@@ -57,6 +57,18 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
       form["choices"]["httpGet"]["queryParameterFields"][pair[0]] = field;
     }
   } else if (parameter.choices.type === "command") {
+
+    let providedParameters = {};
+
+    for (let i = 0; i < parameter.choices.details["args"].length; i++) {
+      let pair = parameter.choices.details["args"][i];
+      let field = fieldPath(pair[1], parentKey);
+
+      if (field.indexOf('"') >= 0){
+        providedParameters[pair[0]] = field.split('"')[1];   
+      } 
+    }
+
     form["choices"] = {
       updateOn: ["instance_name"],
       callback: {
@@ -65,6 +77,7 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
           {
             command: parameter.choices.details["name"],
             parameterNames: [],
+            parameters: providedParameters,
           },
         ],
         argumentFields: [],
@@ -75,15 +88,17 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
       let pair = parameter.choices.details["args"][i];
       let field = fieldPath(pair[1], parentKey);
 
-      // special fields are already in this, don't want to duplicate
-      if (!specialField(field)) {
-        form["choices"]["updateOn"].push(field);
-      }
+      if (field.indexOf('"') < 0){
+        // special fields are already in this, don't want to duplicate
+        if (!specialField(field)) {
+          form["choices"]["updateOn"].push(field);
+        }
 
-      form["choices"]["callback"]["argumentFields"].push(field);
-      form["choices"]["callback"]["arguments"][0]["parameterNames"].push(
-        pair[0]
-      );
+        form["choices"]["callback"]["argumentFields"].push(field);
+        form["choices"]["callback"]["arguments"][0]["parameterNames"].push(
+          pair[0]
+        );
+      }
     }
 
     // If it's an object then it's a fully specified command
