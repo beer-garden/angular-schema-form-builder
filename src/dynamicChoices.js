@@ -72,11 +72,11 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
     }
 
     if (parameter.choices.details["version"] !== undefined && parameter.choices.details["version"] !== null){
-      createArguments["version"] = parameter.choices.details["version"]
+      createArguments["system_version"] = parameter.choices.details["version"]
     }
 
     if (parameter.choices.details["instance"] !== undefined && parameter.choices.details["instance"] !== null){
-      createArguments["instance"] = parameter.choices.details["instance"]
+      createArguments["instance_name"] = parameter.choices.details["instance"]
     }
       
 
