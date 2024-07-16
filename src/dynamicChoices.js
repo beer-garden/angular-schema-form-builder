@@ -57,16 +57,34 @@ export function setDynamicChoices(schema, form, parameter, parentKey) {
       form["choices"]["httpGet"]["queryParameterFields"][pair[0]] = field;
     }
   } else if (parameter.choices.type === "command") {
+
+    let createArguments = {
+      command: parameter.choices.details["name"],
+      parameterNames: [],
+    }
+    
+    if (parameter.choices.details["namespace"] !== undefined && parameter.choices.details["namespace"] !== null){
+      createArguments["namespace"] = parameter.choices.details["namespace"]
+    }
+
+    if (parameter.choices.details["system"] !== undefined && parameter.choices.details["system"] !== null){
+      createArguments["system"] = parameter.choices.details["system"]
+    }
+
+    if (parameter.choices.details["version"] !== undefined && parameter.choices.details["version"] !== null){
+      createArguments["version"] = parameter.choices.details["version"]
+    }
+
+    if (parameter.choices.details["instance"] !== undefined && parameter.choices.details["instance"] !== null){
+      createArguments["instance"] = parameter.choices.details["instance"]
+    }
+      
+
     form["choices"] = {
       updateOn: ["instance_name"],
       callback: {
         function: "createRequestWrapper",
-        arguments: [
-          {
-            command: parameter.choices.details["name"],
-            parameterNames: [],
-          },
-        ],
+        arguments: [createArguments],
         argumentFields: [],
       },
     };
