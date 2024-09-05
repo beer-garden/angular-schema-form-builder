@@ -8,7 +8,7 @@ import { buildParameterSF } from "./parameterBuilder";
  */
 export function buildCommonSF(system, command) {
   // SCHEMA
-  let systemVersions = [system.system_version, "latest"]
+  let systemVersions = [system.version, "latest"]
 
   let instanceNames = [];
   for (var instance of system.instances) {
@@ -69,7 +69,7 @@ export function buildCommonSF(system, command) {
     },
   };
 
-  commonSchema["system_version"]["default"] = system.system_version
+  commonSchema["system_version"]["default"] = system.version
 
   if (system.instances.length == 1) {
     commonSchema["instance_name"]["default"] = instanceNames[0];
