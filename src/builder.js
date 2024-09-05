@@ -8,6 +8,8 @@ import { buildParameterSF } from "./parameterBuilder";
  */
 export function buildCommonSF(system, command) {
   // SCHEMA
+  let systemVersions = [system.system_version, "latest"]
+
   let instanceNames = [];
   for (var instance of system.instances) {
     instanceNames.push(instance.name);
@@ -67,6 +69,8 @@ export function buildCommonSF(system, command) {
     },
   };
 
+  commonSchema["system_version"]["default"] = system.system_version
+
   if (system.instances.length == 1) {
     commonSchema["instance_name"]["default"] = instanceNames[0];
     commonSchema["instance_name"]["readonly"] = true;
@@ -100,10 +104,9 @@ export function buildCommonSF(system, command) {
         key: "system_version",
         feedback: false,
         disableSuccessState: true,
-        disableErrorState: true,
-        readonly: true,
-        required: true,
         htmlClass: "col-md-2",
+        type: "select",
+        choices: { titleMap: systemVersions },
       },
       {
         key: "command",
