@@ -79,11 +79,23 @@ export function buildCommonSF(system, command) {
   commonSchema["command_type"]["default"] = command.command_type
 
   // FORM
+  function displayHelpText(system) {
+    let helptext = 'Instance is not RUNNING, ' +
+      'but you can still "Make Request"';
+    if (instance.status == 'AWAITING_SYSTEM') {
+      const requires = system.requires;
+      helptext = 'Unable to determine the status of required system(s): ' +
+      requires.join(', ') +
+      '. Proceed with caution.';
+    }
+    return helptext;
+  }
+
   const instanceHelp = {
     type: "help",
     helpvalue:
-      '<div uib-alert class="alert alert-warning m-b-0">Instance is not RUNNING, ' +
-      'but you can still "Make Request"</div><br>',
+      '<div uib-alert class="alert alert-warning m-b-0">' + displayHelpText(system) +
+      '</div><br>',
     condition: "checkInstance(instance_name)",
   };
 

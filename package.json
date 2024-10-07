@@ -1,6 +1,6 @@
 {
   "name": "@beer-garden/builder",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "AngularJS module to generate Angular-Schema-Form from JSON",
   "author": "The Beergarden Team",
   "contributors": [],
