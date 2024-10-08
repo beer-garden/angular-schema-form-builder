@@ -19,6 +19,9 @@ export function buildCommonSF(system, command, helptext) {
 
   let commandTypes = ["ACTION", "INFO", "TEMP"]
 
+  let helpval = helptext || 'Instance is not RUNNING, ' +
+      'but you can still "Make Request"';
+
   let commonSchema = {
     system: {
       title: "System Name",
@@ -83,7 +86,7 @@ export function buildCommonSF(system, command, helptext) {
   const instanceHelp = {
     type: "help",
     helpvalue:
-      '<div uib-alert class="alert alert-warning m-b-0">' + helptext +
+      '<div uib-alert class="alert alert-warning m-b-0">' + helpval +
       '</div><br>',
     condition: "checkInstance(instance_name)",
   };
