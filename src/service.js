@@ -20,9 +20,10 @@ export function sfBuilderService() {
    *
    * @param {Object} system - A valid beer-garden System object
    * @param {Object} command - A valid beer-garden Command object
+   * @param {Object} helptext - A valid beer-garden helptext
    * @return {Object} schemaForm - An object with schema and form properties
    */
-  SFBuilderService.build = function (system, command) {
+  SFBuilderService.build = function (system, command, helptext) {
     // Build the actual schema and form for this specific command
     let modelSF = buildModelSF(command, ["parameters"]);
     let modelSchema;
@@ -86,7 +87,7 @@ export function sfBuilderService() {
     }
 
     // Build the schema and form common to all commands
-    let commonSF = buildCommonSF(system, command);
+    let commonSF = buildCommonSF(system, command, helptext);
 
     // Tie in the model schema in the correct place
     commonSF["schema"]["parameters"] = modelSchema;
