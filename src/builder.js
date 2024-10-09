@@ -4,9 +4,10 @@ import { buildParameterSF } from "./parameterBuilder";
  * buildCommonSF - * Builds the schema and form common to all commands.
  * @param  {Object} system  beer-garden system object.
  * @param  {Object} command beer-gardne command object.
+ * @param  {Object} helptext  beer-garden helptext object
  * @return {Object}         Schema-form object that is common to all commands.
  */
-export function buildCommonSF(system, command) {
+export function buildCommonSF(system, command, helptext) {
   // SCHEMA
   let systemVersions = [system.version, "latest"]
 
@@ -17,6 +18,9 @@ export function buildCommonSF(system, command) {
   instanceNames.sort();
 
   let commandTypes = ["ACTION", "INFO", "TEMP"]
+
+  let helpval = helptext || 'Instance is not RUNNING, ' +
+      'but you can still "Make Request"';
 
   let commonSchema = {
     system: {
@@ -82,8 +86,8 @@ export function buildCommonSF(system, command) {
   const instanceHelp = {
     type: "help",
     helpvalue:
-      '<div uib-alert class="alert alert-warning m-b-0">Instance is not RUNNING, ' +
-      'but you can still "Make Request"</div><br>',
+      '<div uib-alert class="alert alert-warning m-b-0">' + helpval +
+      '</div><br>',
     condition: "checkInstance(instance_name)",
   };
 
