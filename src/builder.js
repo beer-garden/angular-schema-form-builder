@@ -44,7 +44,7 @@ export function buildCommonSF(system, command, helptext) {
     command: {
       title: "Command Name",
       type: "string",
-      default: command.name,
+      default: command.display_name || command.name,
       required: true,
     },
     comment: {
