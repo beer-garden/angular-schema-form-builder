@@ -29,6 +29,10 @@ export function buildParameterSF(parameter, parentKey, inArray) {
     generalSF["form"]["key"].push("");
   }
 
+  if (parameter.deprecated) {
+    generalSF["schema"]["description"] = "(Deprecated) " + parameter.description;
+  }
+
   // Type-specific schema / forms
   let builderFunction;
   if (parameter.multi && !inArray) {
